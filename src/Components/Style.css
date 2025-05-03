@@ -5,323 +5,321 @@
     justify-content: center;
     align-items: center;    
     height: 100vh;
-    padding: 1rem; /* Add a little breathing room for smaller screens */
+    padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
     background: linear-gradient(to bottom, #ffffff, #f9f0ff);
-    
-  }
-  html {
-    height: 100%;
-    min-height: 100dvh; /* modern fix */
-  }
-body{
-  background-color: rgba(243, 213, 250, 0.5);
-  margin-top: 1rem;
- 
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
- 
 }
 
-.main{
-  display: flex;
-  gap:0.5rem;
-  flex:1;
-  justify-content: center;
-  overflow-y: auto;
-  min-height: 100vh;
-  height: auto;
+html {
+    min-height: 100dvh; /* Modern fix */
 }
-  .centered-div {
+
+body {
+    background-color: rgba(243, 213, 250, 0.5);
+    margin-top: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.taskform {
+    height: auto;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    gap: clamp(0.25rem, 1vw, 0.5rem); /* Responsive gap */
+    flex: 1;
+    justify-content: center;
+    overflow-y: auto;
+    min-height: 90vh;
+   height: 90vh;
+}
+
+.centered-div {
     width: 100%;
-    max-width:2000px; /* Prevent super wide stretches on large screens */
-    padding: 4rem;
+    max-width: 2000px; /* Prevent super wide stretches */
+    padding: clamp(1rem, 3vw, 4rem); /* Responsive padding */
     background-color: #f0f0f0;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Helps when screen size shrinks */
+    flex-wrap: wrap;
     box-sizing: border-box;
     justify-content: space-around;
-   
-  }
-  
-  .cta-div {
+}
+
+.cta-div {
     flex: 2;
     display: flex;
     flex-direction: column; 
-   align-items: center;
+    align-items: center;
     text-align: center;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
+    padding: clamp(1rem, 2.5vw, 2rem); /* Responsive padding */
     max-width: 350px;
-  }
-  
-  .cta-div > p {
-    font-size: clamp(1rem, 2vw, 1.5rem); /* Scales smoothly */
-    margin-bottom: 1rem;
-  }
-  
-  .btn {
+}
+
+.cta-div > p {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Already responsive */
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+}
+
+.btn {
     background: linear-gradient(to right, #e66ce1, #d456d3);
-  color: white;
-  padding: 0.7rem 1.2rem;
-  font-size: 1rem;
-  font-family: 'Exo 2', sans-serif;
-  border: none;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  .btn:hover {
+    color: white;
+    padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(0.8rem, 2vw, 1.2rem); /* Responsive padding */
+    font-size: clamp(0.875rem, 1.8vw, 1rem); /* Responsive font */
+    font-family: 'Exo 2', sans-serif;
+    border: none;
+    border-radius: clamp(0.4rem, 1vw, 0.6rem); /* Responsive radius */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
     background: linear-gradient(to right, #d456d3, #e66ce1);
     transform: scale(1.05);
-  }
+}
 
-  .taskform {
-    padding: 3rem;
+.taskform {
+    padding: clamp(1rem, 2.5vw, 3rem); /* Responsive padding */
     display: flex;
-  flex-direction: column;
-  min-height: 70vh;
-  max-height: none;
-  /*width: 100vw;*/
-  overflow: hidden;
-  margin: 0;
-  align-items: center;
-    
-  }
- 
-  .taskcard{
+    flex-direction: column;
+    min-height: 70vh;
+    max-height: none;
+    overflow: hidden;
+    margin: 0;
+    align-items: center;
+}
+
+.taskcard {
     background-color: #fff;
     color: #71087a;
-    margin: 0.1rem;
-    border-radius: 0.1rem;
-    padding: 1rem;
-    max-width: 25rem;
-    min-width: 20rem;
+    margin: clamp(0.05rem, 0.5vw, 0.1rem); /* Responsive margin */
+    border-radius: clamp(0.05rem, 0.3vw, 0.1rem); /* Responsive radius */
+    padding: clamp(0.5rem, 1.5vw, 1rem); /* Responsive padding */
+    max-width: clamp(20rem, 50vw, 25rem); /* Responsive width */
+    min-width: clamp(15rem, 40vw, 20rem); /* Responsive min-width */
     font-family: 'Exo 2', sans-serif;
     transition: 0.2s ease-in-out;
+}
 
-  }
-  .taskcard:hover{
+.taskcard:hover {
     transform: scale(1.05);
-   
+}
 
-  }
-
-  .task-div{
+.task-div {
     display: flex;
-  }
-  .task-status{
-    flex: 1;
-   /* text-align: center;*/
-    border-left: solid black 0.2rem;
-    height: 100vh;
+}
 
-  }
-  .subtaskCard{
-    min-width: 6rem;
+.task-status {
+    flex: 1;
+    border-left: solid black clamp(0.1rem, 0.5vw, 0.2rem); /* Responsive border */
+    height: 100vh;
+}
+
+.subtaskCard {
+    min-width: clamp(5rem, 15vw, 6rem); /* Responsive min-width */
     color: navy;
-    font-size: 1rem;
-    margin:  0.3rem  ;
-    width: 12rem;
-    padding: 0.3rem 0.5rem;
+    font-size: clamp(0.875rem, 1.8vw, 1rem); /* Responsive font */
+    margin: clamp(0.15rem, 0.8vw, 0.3rem); /* Responsive margin */
+    width: clamp(10rem, 25vw, 12rem); /* Responsive width */
+    padding: clamp(0.2rem, 0.8vw, 0.3rem) clamp(0.3rem, 1vw, 0.5rem); /* Responsive padding */
     display: flex;
     flex-direction: row-reverse;
     justify-content: left;
     font-weight: 600;
-    
-  }
-  .subtaskCard > button{
+}
+
+.subtaskCard > button {
     background-color: rgba(21, 86, 211, 0.08);
     color: navy;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem); /* Responsive font */
     border: none;
-    border-radius: 0.7rem;
-    margin-right: 0.5rem;
-  }
-  .subtaskCard-div{
+    border-radius: clamp(0.5rem, 1vw, 0.7rem); /* Responsive radius */
+    margin-right: clamp(0.3rem, 1vw, 0.5rem); /* Responsive margin */
+}
+
+.subtaskCard-div {
     padding: 0;
     margin: 0;
     overflow-y: auto;
-     max-height: 100%;
+    max-height: 100%;
+}
 
-  }
-  .subtaskZone{
-    /*border: 0.3rem solid #d456d3;*/
-    border-radius: 0.7rem;
-    padding: 0.6rem;
+.subtaskZone {
+    border-radius: clamp(0.5rem, 1vw, 0.7rem); /* Responsive radius */
+    padding: clamp(0.4rem, 1.2vw, 0.6rem); /* Responsive padding */
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Exo 2', sans-serif;
-    min-height: 10rem;
+    min-height: clamp(8rem, 20vh, 10rem); /* Responsive height */
     flex: 1;
     background-color: rgba(212,86,211,0.1);
     overflow-y: auto;
     max-height: 100%;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    margin-bottom: 2rem;
-    
-    
-  }
-  .subtaskZone> h2,h3,h4{
+    margin-bottom: clamp(1rem, 2.5vw, 2rem); /* Responsive margin */
+}
+
+.subtaskZone > h2, h3, h4 {
     color: #71087a;
     font-family: 'Exo 2', sans-serif;
     font-weight: 400;
     margin: 0;
-    font-size: 1rem;
-  }
-  .Form {
+    font-size: clamp(0.875rem, 1.8vw, 1rem); /* Responsive font */
+}
+
+.Form {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    gap: clamp(0.3rem, 1vw, 0.5rem); /* Responsive gap */
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
     width: 90%;
     justify-content: center;
-  }
-  .Form > input{
+}
 
+.Form > input {
     flex: 1;
-    padding: 0.7rem 1rem;
+    padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(0.7rem, 1.8vw, 1rem); /* Responsive padding */
     border: none;
-    border-radius: 0.6rem;
+    border-radius: clamp(0.4rem, 1vw, 0.6rem); /* Responsive radius */
     background-color: #ffffff;
     font-family: 'Exo 2', sans-serif;
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 18vw, 1rem); /* Responsive font */
     box-shadow: 0 0 8px rgba(212, 86, 211, 0.2);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
-  }
-  .Form input:focus {
+}
+
+.Form input:focus {
     outline: none;
     box-shadow: 0 0 12px rgba(212, 86, 211, 0.5);
     transform: scale(1.02);
-  }
-  .Form > button{
+}
 
-  background: linear-gradient(to right, #e66ce1, #d456d3);
-  color: white;
-  padding: 0.7rem 1.2rem;
-  font-size: 1rem;
-  font-family: 'Exo 2', sans-serif;
-  border: none;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: background 0.3s ease, transform 0.2s ease;
-  }
-  .Form button:hover {
+.Form > button {
+    background: linear-gradient(to right, #e66ce1, #d456d3);
+    color: white;
+    padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(0.8rem, 2vw, 1.2rem); /* Responsive padding */
+    font-size: clamp(0.875rem, 1.8vw, 1rem); /* Responsive font */
+    font-family: 'Exo 2', sans-serif;
+    border: none;
+    border-radius: clamp(0.4rem, 1vw, 0.6rem); /* Responsive radius */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.Form button:hover {
     background: linear-gradient(to right, #d456d3, #e66ce1);
     transform: scale(1.05);
-  }
-  .subtaskH3{
+}
+
+.subtaskH3 {
     color: #71087a;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
     font-weight: 600;
-    font-size: 1.7rem;
+    font-size: clamp(1.4rem, 2.5vw, 1.7rem); /* Responsive font */
+}
 
-  }
-  .chartZone{
+.chartZone {
     display: flex;
-  flex-direction: column;
-  width: 50vw;
-  flex: 1;
-  min-height: 0;
-  overflow: hidden;
-  margin: 0;
+    flex-direction: column;
+    width: clamp(40vw, 50vw, 60vw); /* Responsive width */
+    flex: 1;
+    overflow: hidden;
+    margin: 0;
+    overflow: hidden;
+}
 
-  }
-  .taskchartZone {
+.taskchartZone {
     background-color: rgba(212,86,211,0.1);
-    border-radius: 0.7rem;
-    padding: 1rem;
+    border-radius: clamp(0.5rem, 1vw, 0.7rem); /* Responsive radius */
+    padding: clamp(0.5rem, 1.5vw, 1rem); /* Responsive padding */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     font-family: cursive;
-    min-height: 20rem;
-    gap: 3rem;
+    min-height: clamp(15rem, 30vh, 20rem); /* Responsive height */
+    gap: clamp(1.5rem, 3vw, 3rem); /* Responsive gap */
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  }
-
-  
-
-
-  .chartZone-child{
-    display: flex;
-  gap: 1rem;
-  margin-top: 0.5rem;
-  height: calc(100vh - 6rem); /* Adjust to fit your layout */
-  overflow: hidden;
-  width: 50rem;
+    flex: 1;
     
-  }
- 
-  .date{
+}
+
+.chartZone-child {
+    display: flex;
+    gap: clamp(0.5rem, 1.5vw, 1rem); /* Responsive gap */
+    margin-top: clamp(0.3rem, 1vw, 0.5rem); /* Responsive margin */
+    height: calc(100vh - clamp(4rem, 10vh, 6rem)); /* Responsive height */
+    overflow: hidden;
+    width: clamp(100%, 50vw, 50rem); /* Responsive width */
+    flex: 1;
+}
+
+.date {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 800;
-    font-size: 5rem;
+    font-size: clamp(3rem, 8vw, 5rem); /* Responsive font */
     padding: 0;
     margin: 0;
+}
 
-  }
-  .time{
+.time {
     font-family: monospace;
     font-weight: 800;
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem); /* Responsive font */
     margin: 0;
     color: #d456d3;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
-    padding: 0.5rem;  
-    border-radius: 0.5rem;
-    
+    padding: clamp(0.3rem, 1vw, 0.5rem); /* Responsive padding */
+    border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Responsive radius */
+}
 
-    
-  }
-  .time>p{
+.time > p {
     padding: 0;
     margin: 0;
-    
-   
-  }
-  .year{
+}
+
+.year {
     padding-top: 0;
     font-family: 'Exo 2', sans-serif;
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Responsive font */
     margin: 0;
     padding: 0;
     color: #71087a;
-    margin-bottom: 1.3rem;
-    border-bottom: #440b49d7 solid 0.16rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: clamp(0.8rem, 2vw, 1.3rem); /* Responsive margin */
+    border-bottom: #440b49d7 solid clamp(0.1rem, 0.4vw, 0.16rem); /* Responsive border */
+    padding-bottom: clamp(0.3rem, 1vw, 0.5rem); /* Responsive padding */
+}
 
-
-  }
-  .weekday{
+.weekday {
     padding-top: 0;
     font-family: 'Exo 2', sans-serif;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3.5vw, 2rem); /* Responsive font */
     margin: 0;
     padding: 0;
     color: #71087a;
-  
-  }
-  .dateZone-inner{
+}
+
+.dateZone-inner {
     background-color: rgba(212,175,207,0.973);
     color: #440b49d7;
-    padding: 0.5rem;
-    border-radius: 0.4rem;
+    padding: clamp(0.3rem, 1vw, 0.5rem); /* Responsive padding */
+    border-radius: clamp(0.2rem, 0.8vw, 0.4rem); /* Responsive radius */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -329,364 +327,359 @@ html, body {
     box-shadow: 0px 8px 10px rgba(0,0,0,0.2);
     margin: 0;
     width: 30%;
-    margin-bottom: 2rem;
-    
-  }
+    margin-bottom: clamp(1rem, 2.5vw, 2rem); /* Responsive margin */
+}
 
-  .dateZone-inner >p{
+.dateZone-inner > p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #440b49d7;
     font-weight: 400;
-
-  
-    
-  }
-
-  .taskcardZone{
-  overflow-y: auto;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-  width: 32%;
-}
-.taskcardHeader{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0 0.5rem;
-  background-color: rgba(212,86,211,0.3);
-  border-radius: 0.2rem;
-
-}
-.toggle-status{
-  font-size: 1.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  color: #8b0000;
-}
-.toggle-status:hover{
-
-  transform: scale(1.5);
-  
-}
-.onGoing:hover{
-
-  transform: scale(1.5);
-}
-.onGoing{
-  color: #e69603;
-  font-size: 1.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-
-}
-.completed{
-  color: #008000;
-  font-size: 1.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-.status{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-.taskcardBody{
-  display: flex;
-  flex-direction: column;
 }
 
-.taskDeleteIcon
-{
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-
-
+.taskcardZone {
+    overflow-y: auto;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(1rem, 2.5vw, 2rem); /* Responsive margin */
+    width: 32%;
 }
-.taskDeleteIcon:hover{
-  transform: scale(1.5)
 
+.taskcardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 clamp(0.3rem, 1vw, 0.5rem); /* Responsive padding */
+    background-color: rgba(212,86,211,0.3);
+    border-radius: clamp(0.1rem, 0.5vw, 0.2rem); /* Responsive radius */
 }
-.taskChart{
-  background-color: rgba(240, 255, 255,0.3);
-  width: 30%;
-  padding: 1rem;
-  opacity: 0.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 0.5rem;
-  height: 60%;
-  font-size: 0.8rem;
-}
-.barchart{
-  flex: 2;
 
+.toggle-status {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Responsive font */
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    color: #8b0000;
 }
-  @media (max-width: 768px) {
+
+.toggle-status:hover {
+    transform: scale(1.5);
+}
+
+.onGoing {
+    color: #e69603;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Responsive font */
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.onGoing:hover {
+    transform: scale(1.5);
+}
+
+.completed {
+    color: #008000;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Responsive font */
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.taskcardBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.taskDeleteIcon {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.taskDeleteIcon:hover {
+    transform: scale(1.5);
+}
+
+.taskChart {
+    background-color: rgba(240, 255, 255,0.3);
+    width: 30%;
+    padding: clamp(0.5rem, 1.5vw, 1rem); /* Responsive padding */
+    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Responsive radius */
+    height: 60%;
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem); /* Responsive font */
+}
+
+.barchart {
+    flex: 2;
+}
+
+@media (max-width: 768px) {
     .centered-div {
-      flex-direction: column;
-      padding: 1rem;
-      gap: 2rem;
-      max-width: 97%;
+        flex-direction: column;
+        padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
+        gap: clamp(1rem, 3vw, 2rem); /* Responsive gap */
+        max-width: 97%;
     }
-  
+
     .cta-div > p {
-      font-size: 1.2rem;
+        font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font */
     }
-  
+
     .btn {
-      width: 80%;
+        width: 80%;
     }
-  }
+}
 
-
-  /* Chrome, Edge, Safari */
+/* Chrome, Edge, Safari */
 .subtaskZone::-webkit-scrollbar {
-  width: 1rem;
+    width: clamp(0.5rem, 1.5vw, 1rem); /* Responsive scrollbar */
 }
 
 .subtaskZone::-webkit-scrollbar-track {
-  background: rgba(21, 86, 211, 0);
-  border-radius: 1rem;
+    background: rgba(21, 86, 211, 0);
+    border-radius: clamp(0.5rem, 1vw, 1rem); /* Responsive radius */
 }
 
 .subtaskZone::-webkit-scrollbar-thumb {
-  background-color: #1556d333;
-  border-radius: 1rem;
-  border: 2px solid transparent;
-  background-clip: content-box;
+    background-color: #1556d333;
+    border-radius: clamp(0.5rem, 1vw, 1rem); /* Responsive radius */
+    border: 2px solid transparent;
+    background-clip: content-box;
 }
 
 .subtaskZone::-webkit-scrollbar-thumb:hover {
-  background-color:  #1556d333;
+    background-color: #1556d333;
 }
 
 /* Firefox */
 .subtaskZone {
-  scrollbar-width: thick;
-  scrollbar-color: #1556d333 rgba(21, 86, 211, 0);
+    scrollbar-width: thick;
+    scrollbar-color: #1556d333 rgba(21, 86, 211, 0);
 }
+
 @media (max-width: 1024px) {
-  .main {
-    flex-direction: column;
-    height: auto;
-  }
+    .main {
+        flex-direction: column;
+        height: auto;
+    }
 
-  .chartZone,
-  .chartZone-child,
-  .taskcardZone {
-    width: 100%;
-  }
+    .chartZone,
+    .chartZone-child,
+    .taskcardZone {
+        width: 100%;
+    }
 
-  .chartZone-child {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
+    .chartZone-child {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
 
-  .dateZone-inner {
-    width: 90%;
-  }
+    .dateZone-inner {
+        width: 90%;
+    }
 
-  .taskchartZone {
-    flex-direction: column;
-    gap: 1rem;
-  }
+    .taskchartZone {
+        flex-direction: column;
+        gap: clamp(0.5rem, 2vw, 1rem); /* Responsive gap */
+    }
 
-  .taskChart,
-  .barchart {
-    width: 100%;
-  }
+    .taskChart,
+    .barchart {
+        width: 100%;
+    }
 
-  .subtaskZone {
-    width: 90%;
-  }
+    .subtaskZone {
+        width: 90%;
+    }
 
-  .taskcardZone {
-    padding: 0;
-  }
+    .taskcardZone {
+        padding: 0;
+    }
 }
 
 @media (max-width: 768px) {
-  .taskform {
-    padding: 1rem;
-    height: auto;
-  }
+    .taskform {
+        padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
+        height: auto;
+    }
 
-  .chartZone {
-    width: 100%;
-    flex: none;
-  }
+    .chartZone {
+        width: 100%;
+        flex: none;
+    }
 
-  .taskcard {
-    width: 90%;
-    max-width: 100%;
-  }
+    .taskcard {
+        width: 90%;
+        max-width: 100%;
+    }
 
-  .Form {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
+    .Form {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
 
-  .Form input,
-  .Form button {
-    width: 100%;
-  }
+    .Form input,
+    .Form button {
+        width: 100%;
+    }
 
-  .date {
-    font-size: 3rem;
-  }
+    .date {
+        font-size: clamp(2rem, 6vw, 3rem); /* Responsive font */
+    }
 
-  .year {
-    font-size: 1.2rem;
-  }
+    .year {
+        font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font */
+    }
 
-  .weekday {
-    font-size: 1.5rem;
-  }
+    .weekday {
+        font-size: clamp(1.2rem, 3vw, 1.5rem); /* Responsive font */
+    }
 }
+
 @media (max-width: 768px) {
-  .mobile-subtask-dropdown {
-    padding: 1rem;
-    background-color: #f9f0ff;
-    border-top: 1px solid #ccc;
-    margin-top: 0.5rem;
-    animation: slideDown 0.3s ease-in-out;
-  }
+    .mobile-subtask-dropdown {
+        padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
+        background-color: #f9f0ff;
+        border-top: 1px solid #ccc;
+        margin-top: clamp(0.3rem, 1vw, 0.5rem); /* Responsive margin */
+        animation: slideDown 0.3s ease-in-out;
+    }
 
-  @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 }
+
 @media (max-width: 768px) {
-  .mobile-subtask-dropdown {
-    background-color: rgba(212, 86, 211, 0.05);
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    padding: 0.8rem;
-    margin-top: 1rem;
-    animation: slideDown 0.3s ease-in-out;
-    width: 100%;
-  }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
+    .mobile-subtask-dropdown {
+        background-color: rgba(212, 86, 211, 0.05);
+        border: 1px solid #ddd;
+        border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Responsive radius */
+        padding: clamp(0.5rem, 1.5vw, 0.8rem); /* Responsive padding */
+        margin-top: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+        animation: slideDown 0.3s ease-in-out;
+        width: 100%;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-  }
 
-  .Form {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.7rem;
-  }
+    .Form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: clamp(0.5rem, 1.5vw, 0.7rem); /* Responsive gap */
+    }
 
-  .Form > input,
-  .Form > button {
-    width: 100%;
-  }
+    .Form > input,
+    .Form > button {
+        width: 100%;
+    }
 
-  .subtaskZone {
-    width: 100%;
-  }
+    .subtaskZone {
+        width: 100%;
+    }
 
-  .taskcard {
-    width: 100%;
-  }
+    .taskcard {
+        width: 100%;
+    }
 
-  .main {
-    flex-direction: column;
-    height: auto;
-    overflow-y: auto;
-    padding: 1rem;
-  }
+    .main {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+        padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
+    }
 
-  .taskcardZone,
-  .chartZone-child,
-  .chartZone {
-    width: 100% !important;
-  }
+    .taskcardZone,
+    .chartZone-child,
+    .chartZone {
+        width: 100% !important;
+    }
 }
+
 @media (max-width: 768px) {
-  /* Ensure full subtaskZone isn't shown on mobile */
-  .subtaskZone {
-    display: none !important;
-  }
-
-  .taskcard {
-    width: 90vw !important;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .mobile-subtask-dropdown {
-    background-color: rgba(212, 86, 211, 0.05);
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    padding: 0.8rem;
-    margin-top: 1rem;
-    animation: slideDown 0.3s ease-in-out;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-
-  .mobile-subtask-dropdown * {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .Form {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.7rem;
-  }
-
-  .Form > input,
-  .Form > button {
-    width: 100%;
-  }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
+    .subtaskZone {
+        display: none !important;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    .taskcard {
+        width: 90vw !important;
+        max-width: 100%;
+        box-sizing: border-box;
     }
-  }
 
-  .main {
-    flex-direction: column;
-    height: auto;
-    overflow-y: auto;
-    padding: 1rem;
-  }
+    .mobile-subtask-dropdown {
+        background-color: rgba(212, 86, 211, 0.05);
+        border: 1px solid #ddd;
+        border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Responsive radius */
+        padding: clamp(0.5rem, 1.5vw, 0.8rem); /* Responsive padding */
+        margin-top: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+        animation: slideDown 0.3s ease-in-out;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
 
-  .taskcardZone,
-  .chartZone-child,
-  .chartZone {
-    width: 100% !important;
-  }
+    .mobile-subtask-dropdown * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .Form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: clamp(0.5rem, 1.5vw, 0.7rem); /* Responsive gap */
+    }
+
+    .Form > input,
+    .Form > button {
+        width: 100%;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .main {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+        padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
+    }
+
+    .taskcardZone,
+    .chartZone-child,
+    .chartZone {
+        width: 100% !important;
+    }
 }
-
-
-   
-    
