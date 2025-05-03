@@ -4,6 +4,7 @@ import Button from "./Button";
 function Subtaskform(props) {
     const [subtaskTitle, setSubtaskTitle] = useState('');
     const handleChange = (e) => {
+        e.stopPropagation();
         setSubtaskTitle(e.target.value);
     }
 
