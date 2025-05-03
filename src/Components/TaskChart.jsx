@@ -26,7 +26,7 @@ const TaskChart =({taskList})=>{
     return(<div className="taskChart">
          {sortTask()}
          <h3>Task Summary</h3>
-        <p>Number of tasks: {tasks.length-5}</p>
+        <p>Number of tasks: {tasks.length}</p>
         <p>Completed Tasks: {completed.length}</p>
         <p>Ongoing Tasks: {onGoing.length}</p>
         <p>Not Started: {notStarted.length}</p>
