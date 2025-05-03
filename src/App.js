@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import Intro from './Components/intro';
 import './App.css';
+import Taskform from './Components/Taskform';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [started , setStarted] = useState(false);
+  
+  const handleClick =()=> setStarted(prev=> !prev);
+
+
+
+  return (<>
+    
+     {!started && <Intro onClick ={handleClick} /> }
+      {started && <Taskform  setStarted ={setStarted}/>}
+    
+ </> );
 }
 
 export default App;
