@@ -5,17 +5,17 @@
     justify-content: center;
     align-items: center;    
     height: 100vh;
-    padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
+    padding: clamp(0.25rem, 1.5vw, 0.75rem); /* Reduced padding */
     background: linear-gradient(to bottom, #ffffff, #f9f0ff);
 }
 
 html {
-    min-height: 100dvh; /* Modern fix */
+    min-height: 100dvh;
 }
 
 body {
     background-color: rgba(243, 213, 250, 0.5);
-    margin-top: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+    margin-top: clamp(0.25rem, 1vw, 0.75rem); /* Reduced margin */
 }
 
 html, body {
@@ -25,24 +25,23 @@ html, body {
 }
 
 .taskform {
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .main {
     display: flex;
-    gap: clamp(0.25rem, 1vw, 0.5rem); /* Responsive gap */
+    gap: clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced gap */
     flex: 1;
     justify-content: center;
     overflow-y: auto;
     min-height: 90vh;
-   height: 90vh;
+    height: auto;
 }
 
 .centered-div {
     width: 100%;
-    max-width: 2000px; /* Prevent super wide stretches */
-    padding: clamp(1rem, 3vw, 4rem); /* Responsive padding */
+    max-width: 1200px; /* Reduced max-width for better proportionality */
+    padding: clamp(0.75rem, 2vw, 2rem); /* Reduced padding */
     background-color: #f0f0f0;
     display: flex;
     align-items: center;
@@ -58,27 +57,27 @@ html, body {
     align-items: center;
     text-align: center;
     background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    padding: clamp(1rem, 2.5vw, 2rem); /* Responsive padding */
-    max-width: 350px;
+    border-radius: 10px; /* Slightly smaller radius */
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    padding: clamp(0.75rem, 2vw, 1.5rem); /* Reduced padding */
+    max-width: 300px; /* Slightly smaller max-width */
 }
 
 .cta-div > p {
-    font-size: clamp(1rem, 2vw, 1.5rem); /* Already responsive */
-    margin-bottom: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+    font-size: clamp(0.875rem, 1.8vw, 1.25rem); /* Smaller font size */
+    margin-bottom: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced margin */
 }
 
 .btn {
     background: linear-gradient(to right, #e66ce1, #d456d3);
     color: white;
-    padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(0.8rem, 2vw, 1.2rem); /* Responsive padding */
-    font-size: clamp(0.875rem, 1.8vw, 1rem); /* Responsive font */
+    padding: clamp(0.4rem, 1.2vw, 0.6rem) clamp(0.6rem, 1.5vw, 1rem); /* Reduced padding */
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem); /* Smaller font */
     font-family: 'Exo 2', sans-serif;
     border: none;
-    border-radius: clamp(0.4rem, 1vw, 0.6rem); /* Responsive radius */
+    border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Smaller radius */
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15); /* Softer shadow */
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -88,7 +87,7 @@ html, body {
 }
 
 .taskform {
-    padding: clamp(1rem, 2.5vw, 3rem); /* Responsive padding */
+    padding: clamp(0.75rem, 2vw, 2rem); /* Reduced padding */
     display: flex;
     flex-direction: column;
     min-height: 70vh;
@@ -101,11 +100,11 @@ html, body {
 .taskcard {
     background-color: #fff;
     color: #71087a;
-    margin: clamp(0.05rem, 0.5vw, 0.1rem); /* Responsive margin */
-    border-radius: clamp(0.05rem, 0.3vw, 0.1rem); /* Responsive radius */
-    padding: clamp(0.5rem, 1.5vw, 1rem); /* Responsive padding */
-    max-width: clamp(20rem, 50vw, 25rem); /* Responsive width */
-    min-width: clamp(15rem, 40vw, 20rem); /* Responsive min-width */
+    margin: clamp(0.05rem, 0.4vw, 0.1rem); /* Reduced margin */
+    border-radius: clamp(0.05rem, 0.3vw, 0.1rem); /* Smaller radius */
+    padding: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced padding */
+    max-width: clamp(15rem, 45vw, 20rem); /* Smaller width */
+    min-width: clamp(12rem, 35vw, 15rem); /* Smaller min-width */
     font-family: 'Exo 2', sans-serif;
     transition: 0.2s ease-in-out;
 }
@@ -120,17 +119,17 @@ html, body {
 
 .task-status {
     flex: 1;
-    border-left: solid black clamp(0.1rem, 0.5vw, 0.2rem); /* Responsive border */
+    border-left: solid black clamp(0.08rem, 0.4vw, 0.15rem); /* Smaller border */
     height: 100vh;
 }
 
 .subtaskCard {
-    min-width: clamp(5rem, 15vw, 6rem); /* Responsive min-width */
+    min-width: clamp(4rem, 12vw, 5rem); /* Smaller min-width */
     color: navy;
-    font-size: clamp(0.875rem, 1.8vw, 1rem); /* Responsive font */
-    margin: clamp(0.15rem, 0.8vw, 0.3rem); /* Responsive margin */
-    width: clamp(10rem, 25vw, 12rem); /* Responsive width */
-    padding: clamp(0.2rem, 0.8vw, 0.3rem) clamp(0.3rem, 1vw, 0.5rem); /* Responsive padding */
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem); /* Smaller font */
+    margin: clamp(0.1rem, 0.6vw, 0.2rem); /* Reduced margin */
+    width: clamp(8rem, 20vw, 10rem); /* Smaller width */
+    padding: clamp(0.15rem, 0.6vw, 0.25rem) clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced padding */
     display: flex;
     flex-direction: row-reverse;
     justify-content: left;
@@ -141,10 +140,10 @@ html, body {
     background-color: rgba(21, 86, 211, 0.08);
     color: navy;
     font-weight: 600;
-    font-size: clamp(0.7rem, 1.5vw, 0.8rem); /* Responsive font */
+    font-size: clamp(0.6rem, 1.2vw, 0.75rem); /* Smaller font */
     border: none;
-    border-radius: clamp(0.5rem, 1vw, 0.7rem); /* Responsive radius */
-    margin-right: clamp(0.3rem, 1vw, 0.5rem); /* Responsive margin */
+    border-radius: clamp(0.4rem, 0.8vw, 0.6rem); /* Smaller radius */
+    margin-right: clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced margin */
 }
 
 .subtaskCard-div {
@@ -155,20 +154,20 @@ html, body {
 }
 
 .subtaskZone {
-    border-radius: clamp(0.5rem, 1vw, 0.7rem); /* Responsive radius */
-    padding: clamp(0.4rem, 1.2vw, 0.6rem); /* Responsive padding */
+    border-radius: clamp(0.4rem, 0.8vw, 0.6rem); /* Smaller radius */
+    padding: clamp(0.3rem, 1vw, 0.5rem); /* Reduced padding */
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Exo 2', sans-serif;
-    min-height: clamp(8rem, 20vh, 10rem); /* Responsive height */
+    min-height: clamp(6rem, 15vh, 8rem); /* Smaller height */
     flex: 1;
     background-color: rgba(212,86,211,0.1);
     overflow-y: auto;
     max-height: 100%;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    margin-bottom: clamp(1rem, 2.5vw, 2rem); /* Responsive margin */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15); /* Softer shadow */
+    margin-bottom: clamp(0.75rem, 2vw, 1.5rem); /* Reduced margin */
 }
 
 .subtaskZone > h2, h3, h4 {
@@ -176,45 +175,45 @@ html, body {
     font-family: 'Exo 2', sans-serif;
     font-weight: 400;
     margin: 0;
-    font-size: clamp(0.875rem, 1.8vw, 1rem); /* Responsive font */
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem); /* Smaller font */
 }
 
 .Form {
     display: flex;
-    gap: clamp(0.3rem, 1vw, 0.5rem); /* Responsive gap */
-    margin-bottom: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+    gap: clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced gap */
+    margin-bottom: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced margin */
     width: 90%;
     justify-content: center;
 }
 
 .Form > input {
     flex: 1;
-    padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(0.7rem, 1.8vw, 1rem); /* Responsive padding */
+    padding: clamp(0.4rem, 1.2vw, 0.6rem) clamp(0.5rem, 1.5vw, 0.8rem); /* Reduced padding */
     border: none;
-    border-radius: clamp(0.4rem, 1vw, 0.6rem); /* Responsive radius */
+    border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Smaller radius */
     background-color: #ffffff;
     font-family: 'Exo 2', sans-serif;
-    font-size: clamp(0.875rem, 18vw, 1rem); /* Responsive font */
-    box-shadow: 0 0 8px rgba(212, 86, 211, 0.2);
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem); /* Smaller font */
+    box-shadow: 0 0 6px rgba(212, 86, 211, 0.2); /* Softer shadow */
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .Form input:focus {
     outline: none;
-    box-shadow: 0 0 12px rgba(212, 86, 211, 0.5);
+    box-shadow: 0 0 10px rgba(212, 86, 211, 0.5);
     transform: scale(1.02);
 }
 
 .Form > button {
     background: linear-gradient(to right, #e66ce1, #d456d3);
     color: white;
-    padding: clamp(0.5rem, 1.5vw, 0.7rem) clamp(0.8rem, 2vw, 1.2rem); /* Responsive padding */
-    font-size: clamp(0.875rem, 1.8vw, 1rem); /* Responsive font */
+    padding: clamp(0.4rem, 1.2vw, 0.6rem) clamp(0.6rem, 1.5vw, 1rem); /* Reduced padding */
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem); /* Smaller font */
     font-family: 'Exo 2', sans-serif;
     border: none;
-    border-radius: clamp(0.4rem, 1vw, 0.6rem); /* Responsive radius */
+    border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Smaller radius */
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15); /* Softer shadow */
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -225,16 +224,16 @@ html, body {
 
 .subtaskH3 {
     color: #71087a;
-    margin-top: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
-    margin-bottom: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+    margin-top: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced margin */
+    margin-bottom: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced margin */
     font-weight: 600;
-    font-size: clamp(1.4rem, 2.5vw, 1.7rem); /* Responsive font */
+    font-size: clamp(1.2rem, 2vw, 1.5rem); /* Smaller font */
 }
 
 .chartZone {
     display: flex;
     flex-direction: column;
-    width: clamp(40vw, 50vw, 60vw); /* Responsive width */
+    width: clamp(30vw, 45vw, 50vw); /* Smaller width */
     flex: 1;
     overflow: hidden;
     margin: 0;
@@ -243,34 +242,31 @@ html, body {
 
 .taskchartZone {
     background-color: rgba(212,86,211,0.1);
-    border-radius: clamp(0.5rem, 1vw, 0.7rem); /* Responsive radius */
-    padding: clamp(0.5rem, 1.5vw, 1rem); /* Responsive padding */
+    border-radius: clamp(0.4rem, 0.8vw, 0.6rem); /* Smaller radius */
+    padding: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced padding */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     font-family: cursive;
-    min-height: clamp(15rem, 30vh, 20rem); /* Responsive height */
-    gap: clamp(1.5rem, 3vw, 3rem); /* Responsive gap */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    flex: 1;
-    
+    min-height: clamp(12rem, 25vh, 15rem); /* Smaller height */
+    gap: clamp(1rem, 2.5vw, 2rem); /* Reduced gap */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15); /* Softer shadow */
 }
 
 .chartZone-child {
     display: flex;
-    gap: clamp(0.5rem, 1.5vw, 1rem); /* Responsive gap */
-    margin-top: clamp(0.3rem, 1vw, 0.5rem); /* Responsive margin */
-    height: calc(100vh - clamp(4rem, 10vh, 6rem)); /* Responsive height */
+    gap: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced gap */
+    margin-top: clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced margin */
+    height: calc(100vh - clamp(3rem, 8vh, 5rem)); /* Smaller height adjustment */
     overflow: hidden;
-    width: clamp(100%, 50vw, 50rem); /* Responsive width */
-    flex: 1;
+    width: clamp(30rem, 45vw, 40rem); /* Smaller width */
 }
 
 .date {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 800;
-    font-size: clamp(3rem, 8vw, 5rem); /* Responsive font */
+    font-size: clamp(2rem, 6vw, 3.5rem); /* Smaller font */
     padding: 0;
     margin: 0;
 }
@@ -278,13 +274,13 @@ html, body {
 .time {
     font-family: monospace;
     font-weight: 800;
-    font-size: clamp(1.2rem, 2.5vw, 1.4rem); /* Responsive font */
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Smaller font */
     margin: 0;
     color: #d456d3;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
-    padding: clamp(0.3rem, 1vw, 0.5rem); /* Responsive padding */
-    border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Responsive radius */
+    padding: clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced padding */
+    border-radius: clamp(0.2rem, 0.6vw, 0.4rem); /* Smaller radius */
 }
 
 .time > p {
@@ -296,20 +292,20 @@ html, body {
     padding-top: 0;
     font-family: 'Exo 2', sans-serif;
     font-weight: 800;
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Responsive font */
+    font-size: clamp(1rem, 2vw, 1.25rem); /* Smaller font */
     margin: 0;
     padding: 0;
     color: #71087a;
-    margin-bottom: clamp(0.8rem, 2vw, 1.3rem); /* Responsive margin */
-    border-bottom: #440b49d7 solid clamp(0.1rem, 0.4vw, 0.16rem); /* Responsive border */
-    padding-bottom: clamp(0.3rem, 1vw, 0.5rem); /* Responsive padding */
+    margin-bottom: clamp(0.6rem, 1.5vw, 1rem); /* Reduced margin */
+    border-bottom: #440b49d7 solid clamp(0.08rem, 0.3vw, 0.12rem); /* Smaller border */
+    padding-bottom: clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced padding */
 }
 
 .weekday {
     padding-top: 0;
     font-family: 'Exo 2', sans-serif;
     font-weight: 800;
-    font-size: clamp(1.5rem, 3.5vw, 2rem); /* Responsive font */
+    font-size: clamp(1.25rem, 3vw, 1.75rem); /* Smaller font */
     margin: 0;
     padding: 0;
     color: #71087a;
@@ -318,16 +314,16 @@ html, body {
 .dateZone-inner {
     background-color: rgba(212,175,207,0.973);
     color: #440b49d7;
-    padding: clamp(0.3rem, 1vw, 0.5rem); /* Responsive padding */
-    border-radius: clamp(0.2rem, 0.8vw, 0.4rem); /* Responsive radius */
+    padding: clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced padding */
+    border-radius: clamp(0.2rem, 0.6vw, 0.3rem); /* Smaller radius */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 8px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 6px 8px rgba(0,0,0,0.2); /* Softer shadow */
     margin: 0;
     width: 30%;
-    margin-bottom: clamp(1rem, 2.5vw, 2rem); /* Responsive margin */
+    margin-bottom: clamp(0.75rem, 2vw, 1.5rem); /* Reduced margin */
 }
 
 .dateZone-inner > p {
@@ -342,7 +338,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: clamp(1rem, 2.5vw, 2rem); /* Responsive margin */
+    margin-bottom: clamp(0.75rem, 2vw, 1.5rem); /* Reduced margin */
     width: 32%;
 }
 
@@ -351,13 +347,13 @@ html, body {
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding: 0 clamp(0.3rem, 1vw, 0.5rem); /* Responsive padding */
+    padding: 0 clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced padding */
     background-color: rgba(212,86,211,0.3);
-    border-radius: clamp(0.1rem, 0.5vw, 0.2rem); /* Responsive radius */
+    border-radius: clamp(0.1rem, 0.4vw, 0.15rem); /* Smaller radius */
 }
 
 .toggle-status {
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Responsive font */
+    font-size: clamp(1rem, 2vw, 1.25rem); /* Smaller font */
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
@@ -370,7 +366,7 @@ html, body {
 
 .onGoing {
     color: #e69603;
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Responsive font */
+    font-size: clamp(1rem, 2vw, 1.25rem); /* Smaller font */
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
@@ -382,7 +378,7 @@ html, body {
 
 .completed {
     color: #008000;
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Responsive font */
+    font-size: clamp(1rem, 2vw, 1.25rem); /* Smaller font */
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
@@ -409,16 +405,16 @@ html, body {
 }
 
 .taskChart {
-    background-color: rgba(240, 255, 255,0.3);
+    background-color: seks rgba(240, 255, 255,0.3);
     width: 30%;
-    padding: clamp(0.5rem, 1.5vw, 1rem); /* Responsive padding */
+    padding: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced padding */
     opacity: 0.6;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Responsive radius */
+    border-radius: clamp(0.2rem, 0.6vw, 0.4rem); /* Smaller radius */
     height: 60%;
-    font-size: clamp(0.7rem, 1.5vw, 0.8rem); /* Responsive font */
+    font-size: clamp(0.6rem, 1.2vw, 0.75rem); /* Smaller font */
 }
 
 .barchart {
@@ -428,13 +424,13 @@ html, body {
 @media (max-width: 768px) {
     .centered-div {
         flex-direction: column;
-        padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
-        gap: clamp(1rem, 3vw, 2rem); /* Responsive gap */
+        padding: clamp(0.4rem, 1.5vw, 0.75rem); /* Reduced padding */
+        gap: clamp(0.75rem, 2.5vw, 1.5rem); /* Reduced gap */
         max-width: 97%;
     }
 
     .cta-div > p {
-        font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font */
+        font-size: clamp(0.875rem, 2vw, 1.1rem); /* Smaller font */
     }
 
     .btn {
@@ -444,17 +440,17 @@ html, body {
 
 /* Chrome, Edge, Safari */
 .subtaskZone::-webkit-scrollbar {
-    width: clamp(0.5rem, 1.5vw, 1rem); /* Responsive scrollbar */
+    width: clamp(0.4rem, 1.2vw, 0.75rem); /* Smaller scrollbar */
 }
 
 .subtaskZone::-webkit-scrollbar-track {
     background: rgba(21, 86, 211, 0);
-    border-radius: clamp(0.5rem, 1vw, 1rem); /* Responsive radius */
+    border-radius: clamp(0.4rem, 0.8vw, 0.75rem); /* Smaller radius */
 }
 
 .subtaskZone::-webkit-scrollbar-thumb {
     background-color: #1556d333;
-    border-radius: clamp(0.5rem, 1vw, 1rem); /* Responsive radius */
+    border-radius: clamp(0.4rem, 0.8vw, 0.75rem); /* Smaller radius */
     border: 2px solid transparent;
     background-clip: content-box;
 }
@@ -493,7 +489,7 @@ html, body {
 
     .taskchartZone {
         flex-direction: column;
-        gap: clamp(0.5rem, 2vw, 1rem); /* Responsive gap */
+        gap: clamp(0.4rem, 1.5vw, 0.75rem); /* Reduced gap */
     }
 
     .taskChart,
@@ -512,7 +508,7 @@ html, body {
 
 @media (max-width: 768px) {
     .taskform {
-        padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
+        padding: clamp(0.4rem, 1.5vw, 0.75rem); /* Reduced padding */
         height: auto;
     }
 
@@ -538,24 +534,24 @@ html, body {
     }
 
     .date {
-        font-size: clamp(2rem, 6vw, 3rem); /* Responsive font */
+        font-size: clamp(1.5rem, 5vw, 2.5rem); /* Smaller font */
     }
 
     .year {
-        font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font */
+        font-size: clamp(0.875rem, 2vw, 1.1rem); /* Smaller font */
     }
 
     .weekday {
-        font-size: clamp(1.2rem, 3vw, 1.5rem); /* Responsive font */
+        font-size: clamp(1rem, 2.5vw, 1.25rem); /* Smaller font */
     }
 }
 
 @media (max-width: 768px) {
     .mobile-subtask-dropdown {
-        padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
+        padding: clamp(0.4rem, 1.5vw, 0.75rem); /* Reduced padding */
         background-color: #f9f0ff;
         border-top: 1px solid #ccc;
-        margin-top: clamp(0.3rem, 1vw, 0.5rem); /* Responsive margin */
+        margin-top: clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced margin */
         animation: slideDown 0.3s ease-in-out;
     }
 
@@ -569,9 +565,9 @@ html, body {
     .mobile-subtask-dropdown {
         background-color: rgba(212, 86, 211, 0.05);
         border: 1px solid #ddd;
-        border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Responsive radius */
-        padding: clamp(0.5rem, 1.5vw, 0.8rem); /* Responsive padding */
-        margin-top: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+        border-radius: clamp(0.2rem, 0.6vw, 0.4rem); /* Smaller radius */
+        padding: clamp(0.4rem, 1.2vw, 0.6rem); /* Reduced padding */
+        margin-top: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced margin */
         animation: slideDown 0.3s ease-in-out;
         width: 100%;
     }
@@ -590,7 +586,7 @@ html, body {
     .Form {
         flex-direction: column;
         align-items: stretch;
-        gap: clamp(0.5rem, 1.5vw, 0.7rem); /* Responsive gap */
+        gap: clamp(0.4rem, 1.2vw, 0.6rem); /* Reduced gap */
     }
 
     .Form > input,
@@ -610,7 +606,7 @@ html, body {
         flex-direction: column;
         height: auto;
         overflow-y: auto;
-        padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
+        padding: clamp(0.4rem, 1.5vw, 0.75rem); /* Reduced padding */
     }
 
     .taskcardZone,
@@ -634,9 +630,9 @@ html, body {
     .mobile-subtask-dropdown {
         background-color: rgba(212, 86, 211, 0.05);
         border: 1px solid #ddd;
-        border-radius: clamp(0.3rem, 0.8vw, 0.5rem); /* Responsive radius */
-        padding: clamp(0.5rem, 1.5vw, 0.8rem); /* Responsive padding */
-        margin-top: clamp(0.5rem, 1.5vw, 1rem); /* Responsive margin */
+        border-radius: clamp(0.2rem, 0.6vw, 0.4rem); /* Smaller radius */
+        padding: clamp(0.4rem, 1.2vw, 0.6rem); /* Reduced padding */
+        margin-top: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced margin */
         animation: slideDown 0.3s ease-in-out;
         width: 100%;
         box-sizing: border-box;
@@ -651,7 +647,7 @@ html, body {
     .Form {
         flex-direction: column;
         align-items: stretch;
-        gap: clamp(0.5rem, 1.5vw, 0.7rem); /* Responsive gap */
+        gap: clamp(0.4rem, 1.2vw, 0.6rem); /* Reduced gap */
     }
 
     .Form > input,
@@ -674,7 +670,7 @@ html, body {
         flex-direction: column;
         height: auto;
         overflow-y: auto;
-        padding: clamp(0.5rem, 2vw, 1rem); /* Responsive padding */
+        padding: clamp(0.4rem, 1.5vw, 0.75rem); /* Reduced padding */
     }
 
     .taskcardZone,
