@@ -10,12 +10,12 @@ function App() {
 
 
 
-  return (<>
+  return (<div classname="app" >
     
      {!started && <Intro onClick ={handleClick} /> }
       {started && <Taskform  setStarted ={setStarted}/>}
     
- </> );
+ </div> );
 }
 
 export default App;

@@ -8,6 +8,10 @@
     padding: clamp(0.25rem, 1.5vw, 0.75rem); /* Reduced padding */
     background: linear-gradient(to bottom, #ffffff, #f9f0ff);
 }
+.app{
+  display: flex;
+  height: 100vh;
+}
 
 html {
     min-height: 100dvh;
@@ -22,10 +26,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-.taskform {
-    height: 100vh;
 }
 
 .main {
@@ -87,15 +87,23 @@ html, body {
 }
 
 .taskform {
-    padding: clamp(0.75rem, 2vw, 2rem); /* Reduced padding */
+    padding:  clamp(0.75rem, 2vw, 2rem);
     display: flex;
     flex-direction: column;
-    min-height: 70vh;
-    max-height: none;
+    max-height: 90vh;
     overflow: hidden;
     margin: 0;
     align-items: center;
+    padding-bottom: clamp(2.75rem, 4vw, 4rem);
 }
+.taskformControls{
+  display: flex;
+
+ width: 63%;
+ justify-content: space-between;
+}
+
+
 
 .taskcard {
     background-color: #fff;
@@ -182,7 +190,7 @@ html, body {
     display: flex;
     gap: clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced gap */
     margin-bottom: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced margin */
-    width: 90%;
+    width: 30vh;
     justify-content: center;
 }
 
@@ -252,15 +260,16 @@ html, body {
     min-height: clamp(12rem, 25vh, 15rem); /* Smaller height */
     gap: clamp(1rem, 2.5vw, 2rem); /* Reduced gap */
     box-shadow: 0 3px 8px rgba(0,0,0,0.15); /* Softer shadow */
+    flex: 1;
 }
 
 .chartZone-child {
     display: flex;
     gap: clamp(0.4rem, 1.2vw, 0.75rem); /* Reduced gap */
     margin-top: clamp(0.2rem, 0.8vw, 0.4rem); /* Reduced margin */
-    height: calc(100vh - clamp(3rem, 8vh, 5rem)); /* Smaller height adjustment */
+    flex: 1 ;
     overflow: hidden;
-    width: clamp(30rem, 45vw, 40rem); /* Smaller width */
+    width: 100% /* Smaller width */
 }
 
 .date {
@@ -508,8 +517,8 @@ html, body {
 
 @media (max-width: 768px) {
     .taskform {
-        padding: clamp(0.4rem, 1.5vw, 0.75rem); /* Reduced padding */
-        height: auto;
+        padding: clamp(1.4rem, 2.5vw, 1.75rem); /* Reduced padding */
+        max-height: none;
     }
 
     .chartZone {
@@ -620,6 +629,9 @@ html, body {
     .subtaskZone {
         display: none !important;
     }
+    .dateZone{
+      display: none;
+    }
 
     .taskcard {
         width: 90vw !important;
@@ -674,8 +686,24 @@ html, body {
     }
 
     .taskcardZone,
-    .chartZone-child,
     .chartZone {
         width: 100% !important;
+    }
+    .chartZone-child{
+      display: none;
+    }
+    .taskcardZone{
+      max-height: 40vh;
+    }
+    .taskformControls{
+      display: flex;
+      justify-content: space-between;
+      
+    
+     width: 100%;
+  
+    }
+    .Form{
+      max-width: 20vh;
     }
 }

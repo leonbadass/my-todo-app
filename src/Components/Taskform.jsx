@@ -59,17 +59,20 @@ const Taskform = ({setStarted}) => {
 
 return (<div className="taskform">
 
-       
-
-        <div className="main">
-
-       <div className="taskcardZone">
-        <div>
+<div className="taskformControls">
         <form onSubmit={handleSubmit} className="Form">
             <input id="task" type="text" value={description} onChange={handleChange} placeholder="Add Task" />
             <Button innerText='Add' />
         </form>
+        <div className="landing">
+        <Button innerText= "Landing page" onClick= {handleClick}/>
         </div>
+        </div>
+
+        <div className="main">
+       
+
+       <div className="taskcardZone">
        
        <div>
        <RenderTaskcard removeTask = {removeTask} taskList ={taskList} 
