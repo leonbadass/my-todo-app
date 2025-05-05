@@ -103,9 +103,6 @@ return (<div className="taskform">
 
        </div>
        </div>
-                
-    
-        <Button innerText= "Landing page" onClick= {handleClick}/>
 
     </div>)
 }
