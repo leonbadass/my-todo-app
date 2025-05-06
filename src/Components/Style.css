@@ -706,4 +706,7 @@ html, body {
     .Form{
       max-width: 20vh;
     }
+    .taskcard:hover {
+      transform: none;
+  }
 }

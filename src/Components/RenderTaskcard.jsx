@@ -39,7 +39,7 @@ const RenderTaskcard = ({ taskList, removeTask, setSelectTaskId, selectTaskId, s
     const handleResize = () => setIsMobile(isMobileScreen());
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [])// listen for resize;
 
   return (
     <>
