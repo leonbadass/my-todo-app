@@ -22,7 +22,7 @@ const BarChart = ({ taskList }) => {
   };
 
   return (
-    <div className='barchart'>
+    <div >
       <Bar data={data} />
     </div>
   );

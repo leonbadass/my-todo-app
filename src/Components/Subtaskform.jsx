@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "./Button";
+import { FaTrash } from "react-icons/fa";
 
 function Subtaskform(props) {
     const [subtaskTitle, setSubtaskTitle] = useState('');
@@ -45,24 +45,23 @@ function Subtaskform(props) {
         })
     }
 
-
-
-
-    return (<>
-        <h3 className="subtaskH3"> {props.taskList[props.selectTaskId].title.toUpperCase()}</h3>
-        <form className="Form" onSubmit={handleSubmit}>
-            <input id="subtask" type="text" value={subtaskTitle} onChange={handleChange} placeholder="Add Subtasks"/>
-            <Button innerText='+' />
+    return (<div className="overflow-hidden h-full">
+        <h3 className="font-mono text-purple-900 text-2xl tracking-wider leading-loose font-bold"> <span className="text-gray-700 italic text-sm">To-Do</span>:{props.taskList[props.selectTaskId].title.toUpperCase()}</h3>
+        <form className="flex" onSubmit={handleSubmit}>
+            <input className="w-2/3   rounded-l-lg p-2" id="subtask" type="text" value={subtaskTitle} onChange={handleChange} placeholder="Add Subtasks"/>
+            <button type="submit" className="bg-purple-700 w-1/3 text-lg font-bold rounded-r-lg pb-2">+</button>
         </form>
-        <ul className="subtaskCard-div">
+        <h5 className="tracking-wide  font-bold text-sm text-purple-900 my-1">Subtasks:</h5>
+        <ol className= "max-h-[10rem] overflow-y-auto ">
             {Object.values(props.taskList[props.selectTaskId]?.subtask || {})
                 .map(sub =>
-                (<li className="subtaskCard" key={sub.id}> {sub.subTitle}<button type="button" onClick={() => removeSubtask(props.selectTaskId, sub.id)}
-                >X</button>
-
-                </li>))}
-        </ul>
-
-    </>)
+                (<li key={sub.id} className="bg-purple-800 text-base ml-2 font-bold text-purple-200 rounded-r-lg p-1 flex justify-between align-center w-2/3 mt-1 ">
+                    {sub.subTitle}
+                 <FaTrash className="mt-1 " type="button" onClick={() => removeSubtask(props.selectTaskId, sub.id)}
+                 >X</FaTrash>
+                 </li>
+            ))}
+        </ol>
+    </div>)
 }
 export default Subtaskform;

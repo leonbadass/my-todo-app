@@ -57,54 +57,42 @@ const Taskform = ({setStarted}) => {
 
     
 
-return (<div className="taskform">
+    return (<div className="flex bg-purple-200 w-full flex-col p-10 h-full overflow-hidden mx-10">
 
-<div className="taskformControls">
-        <form onSubmit={handleSubmit} className="Form">
-            <input id="task" type="text" value={description} onChange={handleChange} placeholder="Add Task" />
-            <Button innerText='Add' />
-        </form>
-        <div className="landing">
-        <Button innerText= "Landing page" onClick= {handleClick}/>
-        </div>
-        </div>
-
-        <div className="main">
-       
-
-       <div className="taskcardZone">
-       
-       <div>
-       <RenderTaskcard removeTask = {removeTask} taskList ={taskList} 
-        setSelectTaskId={setSelectTaskId} selectTaskId={selectTaskId}
-        setTaskList={setTaskList}/>
-       </div>
-
-       </div>
-       <div className="chartZone">
-        <div className="taskchartZone">
+        <div className="flex justify-between">
+            <form onSubmit={handleSubmit} className="Form">
+                <input id="task" type="text" value={description} onChange={handleChange} placeholder="Add Task" />
+                <Button innerText='Add' />
+            </form>
         
-        <TaskChart taskList={taskList}/>
-        
-            <BarChart taskList ={taskList}/>
+            <Button innerText= "Landing page" onClick= {handleClick}/>
         </div>
-        <div className="chartZone-child">
+               
+        <div className="flex h-full py-4"> 
+           <div className=" w-1/3 p-2 overflow-y-auto max-h-full mb-4 bg-gray-100 rounded-lg" >
+               <RenderTaskcard removeTask = {removeTask} taskList ={taskList} 
+                setSelectTaskId={setSelectTaskId} selectTaskId={selectTaskId}
+                setTaskList={setTaskList}/>
+           </div>
         
-            <DateTimeDisplay/>
-
-        
-        <div className="subtaskZone">
-           <h2>Task Manager</h2>
-            {selectTaskId ? <h4> Add and remove subtasks</h4>:<h4>Click a task to view and manage subtasks</h4>}
-            {selectTaskId && <Subtaskform selectTaskId={selectTaskId} taskList ={taskList} setTaskList={setTaskList}/>}
-        </div>
+           <div className=" flex flex-col gap-4 w-2/3 mx-4 bg-gray-100 bg-opacity-30 rounded-lg mb-4 max-h-full">
+                <div className="flex   gap-10 h-full justify-center items-center" >
+                    <TaskChart taskList={taskList}/>
+                    <BarChart taskList ={taskList}/>
+                </div>
+                <div className="flex  h-full   bg-purple-300 bg-opacity-50 pb-2 ">
+                    <DateTimeDisplay/>
+                    <div className="flex flex-col px-8 pt-2 flex-1 h-full">
+                       <h2 className="font-bold text-lg text-purple-900 self-center tracking-widest ">Task Manager</h2>
+                        {selectTaskId ? <h4 className="text-sm text-purple-800  self-center leading-loose"> Add and remove subtasks</h4>:<h4>Click a task to view and manage subtasks</h4>}
+                        {selectTaskId && <Subtaskform selectTaskId={selectTaskId} taskList ={taskList} setTaskList={setTaskList}/>}
+                    </div>
+                </div>
+           </div>
         </div>
         
-
-       </div>
-       </div>
-
-    </div>)
+        </div>)
+        
 }
 
 export default Taskform;

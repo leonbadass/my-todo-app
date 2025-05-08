@@ -8,19 +8,10 @@
     padding: clamp(0.25rem, 1.5vw, 0.75rem); /* Reduced padding */
     background: linear-gradient(to bottom, #ffffff, #f9f0ff);
 }
-.app{
-  display: flex;
-  height: 100vh;
-}
 
-html {
-    min-height: 100dvh;
-}
 
-body {
-    background-color: rgba(243, 213, 250, 0.5);
-    margin-top: clamp(0.25rem, 1vw, 0.75rem); /* Reduced margin */
-}
+
+
 
 html, body {
     height: 100%;
@@ -246,6 +237,7 @@ html, body {
     overflow: hidden;
     margin: 0;
     overflow: hidden;
+    min-width: 60%;
 }
 
 .taskchartZone {

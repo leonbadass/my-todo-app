@@ -1,5 +1,5 @@
 import Intro from './Components/intro';
-import './App.css';
+//import './index.css';
 import Taskform from './Components/Taskform';
 import { useState } from 'react';
 
@@ -10,7 +10,7 @@ function App() {
 
 
 
-  return (<div classname="app" >
+  return (<div className = "flex h-screen w-screen justify-center bg-purple-200" >
     
      {!started && <Intro onClick ={handleClick} /> }
       {started && <Taskform  setStarted ={setStarted}/>}

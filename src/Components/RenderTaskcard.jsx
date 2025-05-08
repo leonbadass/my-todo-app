@@ -45,8 +45,8 @@ const RenderTaskcard = ({ taskList, removeTask, setSelectTaskId, selectTaskId, s
     <>
       {Object.entries(taskList).map(([key, task]) =>
         task.id ? (
-          <div key={key} className="taskcard" onClick={() => handleClick(key)}>
-            <section className="taskcardHeader">
+          <div key={key} className= " my-1 flex flex-col " onClick={() => handleClick(key)}>
+            <section className="bg-purple-400 flex justify-between p-2 rounded-t-lg">
               <strong>Task: {task.title.toUpperCase()}</strong>
               <p>Subtasks: {!task.subtask ? 0 : Object.keys(task.subtask).length}</p>
 
@@ -56,12 +56,12 @@ const RenderTaskcard = ({ taskList, removeTask, setSelectTaskId, selectTaskId, s
                   e.stopPropagation();
                   removeTask(task.id);
                 }}
-                className="taskDeleteIcon"
+                className=""
               />
             </section>
 
-            <section className="taskcardBody">
-              <div className="status">
+            <section className="p-2 bg-purple-200 rounded-b-lg">
+              <div className=" flex justify-between">
               <p >Status: {task.status}</p>
               <FaBullseye
                 title="Toggle Status"
@@ -75,9 +75,10 @@ const RenderTaskcard = ({ taskList, removeTask, setSelectTaskId, selectTaskId, s
               </div>
 
               {isMobile && selectTaskId === task.id && (
-                <div className="mobile-subtask-dropdown"
+                <div className="mobile-subtask-dropdown "
                 onClick={(e) => e.stopPropagation()}>
                   <Subtaskform
+               
                     selectTaskId={task.id}
                     taskList={taskList}
                     setTaskList={setTaskList}
