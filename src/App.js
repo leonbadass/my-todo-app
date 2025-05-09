@@ -10,7 +10,7 @@ function App() {
 
 
 
-  return (<main className = "flex h-screen w-screen sm:justify-center bg-purple-300 pb-4 sm:pb-10 " 
+  return (<main className = "flex h-screen w-screen align-center justify-center bg-purple-300 pb-4 sm:pb-10 " 
   role="main"
   aria-live="polite">
     

@@ -1,4 +1,4 @@
-import React from "react";
+
 import Button from "./Button";
 import {motion} from "framer-motion"
 import "./Style.css"
@@ -23,9 +23,9 @@ const Intro = (props)=> {
     
 
     return(<>
-    <div className="main-div">
-      <div className="centered-div" >
-        <div >
+    <div className="self-center ">
+      <div className="flex flex-col sm:flex-row justify-center" >
+        <div className="pb-4 sm:pb-1">
         {['Create', 'Execute', 'Delete'].map((text, i) => (
         <motion.div
         whileHover={{ scale: 1.05 }}

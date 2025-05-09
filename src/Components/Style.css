@@ -6,7 +6,7 @@
     align-items: center;    
     height: 100vh;
     padding: clamp(0.25rem, 1.5vw, 0.75rem); /* Reduced padding */
-    background: linear-gradient(to bottom, #ffffff, #f9f0ff);
+   
 }
 
 
