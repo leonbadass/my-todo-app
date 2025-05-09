@@ -79,12 +79,12 @@ useEffect(() => {
                 setTaskList={setTaskList}/>
            </div>
         
-           <div className=" flex flex-col gap-4 w-full sm:w-2/3  lg:mx-4 bg-gray-100 bg-opacity-30 rounded-lg mb-4 max-h-full sm:h-full">
+           <div className=" flex flex-col gap-4 w-full sm:w-2/3  lg:mx-4 bg-gray-100 bg-opacity-30 rounded-lg mb-4  max-h-full sm:h-full">
                 <div className="flex flex-col sm:flex-row gap:5 lg:gap-10 h-full justify-center items-center py-4" >
                     <TaskChart taskList={taskList} />
                     <BarChart taskList ={taskList}/>
                 </div>
-                <div className="  h-full   bg-purple-300 bg-opacity-50  hidden sm:flex sm:pb-4">
+                <div className="  h-full   bg-purple-300 bg-opacity-50  hidden sm:flex ">
                     <DateTimeDisplay/>
                     <div ref={subtaskRef} className="flex flex-col px-8 pt-2 flex-1 h-full">
                        <h2 className="font-bold text-lg text-purple-900 self-center tracking-widest ">Task Manager</h2>

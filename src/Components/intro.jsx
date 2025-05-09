@@ -25,7 +25,7 @@ const Intro = (props)=> {
     return(<>
     <div className="self-center ">
       <div className="flex flex-col sm:flex-row justify-center" >
-        <div className="pb-4 sm:pb-1">
+        <div className="pb-4 sm:pb-1 ">
         {['Create', 'Execute', 'Delete'].map((text, i) => (
         <motion.div
         whileHover={{ scale: 1.05 }}
