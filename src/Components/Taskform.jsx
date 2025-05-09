@@ -1,4 +1,4 @@
-import { useState} from "react"
+import { useState, useEffect,useRef} from "react"
 import useLocalStorageState from "use-local-storage-state";
 import Subtaskform from "./Subtaskform";
 import RenderTaskcard from "./RenderTaskcard";
@@ -13,7 +13,10 @@ const Taskform = ({setStarted}) => {
     const [taskList, setTaskList] = useLocalStorageState('taskList', { defaultValue: {} });
     const [selectTaskId, setSelectTaskId] = useState(null);
    
-
+    const subtaskRef = useRef(null)
+useEffect(() => {
+  subtaskRef.current?.focus();
+}, []);
 
     const handleChange = (e) => {
         setDescription(e.target.value)
@@ -61,11 +64,12 @@ const Taskform = ({setStarted}) => {
 
         <div className="flex justify-between">
             <form onSubmit={handleSubmit} className="flex w-full sm:w-1/3 mx-1 pr-5">
+            <label htmlFor="task" className="sr-only">Task Description</label>
                 <input className="w-2/3   rounded-l-lg p-2" id="task" type="text" value={description} onChange={handleChange} placeholder="Add Task" />
-                 <button type="submit" className="bg-purple-900 hover:bg-purple-500 text-purple-300 hover:text-purple-900 w-1/3 text-lg font-bold rounded-r-lg pb-2 ">+</button>
+                 <button aria-label="Add Task" type="submit" className="bg-purple-900 hover:bg-purple-500 text-purple-300 hover:text-purple-900 w-1/3 text-lg font-bold rounded-r-lg pb-2 "> + </button>
             </form>
         
-            <FaCircleArrowRight onClick= {handleClick} className=" sm:text-4xl text-xl font-bold fill-purple-500 hover:sm:fill-purple-900" title="Back To Landing page"/>
+            <FaCircleArrowRight aria-label="Back to landing page" onClick= {handleClick} className=" sm:text-4xl text-xl font-bold fill-purple-500 hover:sm:fill-purple-900" title="Back To Landing page"/>
         </div>
                
         <div className="flex flex-col h-full  py-2 lg:py-4 sm:flex-row w-full"> 
@@ -82,7 +86,7 @@ const Taskform = ({setStarted}) => {
                 </div>
                 <div className="  h-full   bg-purple-300 bg-opacity-50  hidden sm:flex sm:pb-4">
                     <DateTimeDisplay/>
-                    <div className="flex flex-col px-8 pt-2 flex-1 h-full">
+                    <div ref={subtaskRef} className="flex flex-col px-8 pt-2 flex-1 h-full">
                        <h2 className="font-bold text-lg text-purple-900 self-center tracking-widest ">Task Manager</h2>
                         {selectTaskId ? <h4 className="text-sm text-purple-800  self-center leading-loose"> Add and remove subtasks</h4>
                         :<h4  className="text-sm text-purple-800  self-center leading-loose" >Click a task to view and manage subtasks</h4>}

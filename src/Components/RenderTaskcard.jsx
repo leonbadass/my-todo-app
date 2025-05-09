@@ -42,10 +42,10 @@ const RenderTaskcard = ({ taskList, removeTask, setSelectTaskId, selectTaskId, s
   }, [])// listen for resize;
 
   return (
-    <>
+    <ul>
       {Object.entries(taskList).map(([key, task]) =>
         task.id ? (
-          <div key={key} className= " my-1 flex flex-col " onClick={() => handleClick(key)}>
+          <li role="button" key={key} className= " my-1 flex flex-col " onClick={() => handleClick(key)}>
             <section className="bg-purple-400 flex justify-between p-2 rounded-t-lg">
               <strong>Task: {task.title.toUpperCase()}</strong>
               <p>Subtasks: {!task.subtask ? 0 : Object.keys(task.subtask).length}</p>
@@ -86,10 +86,10 @@ const RenderTaskcard = ({ taskList, removeTask, setSelectTaskId, selectTaskId, s
                 </div>
               )}
             </section>
-          </div>
+          </li>
         ) : null
       )}
-    </>
+    </ul>
   );
 };
 
