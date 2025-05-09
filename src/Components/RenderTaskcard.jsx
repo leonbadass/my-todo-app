@@ -2,7 +2,7 @@ import { FaBullseye, FaTrash } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import Subtaskform from "./Subtaskform";
 
-const isMobileScreen = () => window.innerWidth <= 768;
+const isMobileScreen = () => window.innerWidth <= 450;
 
 const RenderTaskcard = ({ taskList, removeTask, setSelectTaskId, selectTaskId, setTaskList }) => {
   const [isMobile, setIsMobile] = useState(isMobileScreen());

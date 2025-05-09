@@ -10,7 +10,7 @@ function App() {
 
 
 
-  return (<div className = "flex h-screen w-screen justify-center bg-purple-200" >
+  return (<div className = "flex h-screen w-screen sm:justify-center bg-purple-300 pb-4 sm:pb-10" >
     
      {!started && <Intro onClick ={handleClick} /> }
       {started && <Taskform  setStarted ={setStarted}/>}

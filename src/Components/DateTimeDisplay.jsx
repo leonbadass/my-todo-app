@@ -17,7 +17,7 @@ const DateTimeDisplay = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 px-4 bg-purple-500 rounded-bl-lg ">
+    <div className="flex-col items-center justify-center gap-4 px-4 bg-purple-500 rounded-bl-lg hidden lg:flex ">
       <p className='text-2xl text-purple-900 font-bold'>{currentTime.toLocaleDateString('en-US',options.weekday)}</p>
       <p className='text-4xl text-purple-900 font-bold'>{currentTime.toLocaleDateString('en-US',options.date)}</p>
       <p className='text-2xl text-purple-900 font-bold'>{currentTime.toLocaleDateString('en-US',options.year)}</p>
