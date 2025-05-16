@@ -32,7 +32,7 @@ A simple and responsive To-Do List application built with **React** and styled u
 
 | Layer        | Tech              |
 |--------------|-------------------|
-| Frontend     | React ( CRA or Vite) |
+| Frontend     | React ( CRA) |
 | Styling      | TailwindCSS       |
 | State        | React `useState`, `useEffect` |
 | Storage      | `localStorage` API |
@@ -40,21 +40,6 @@ A simple and responsive To-Do List application built with **React** and styled u
 
 ---
 
-## 📂 Project Structure
-
-```bash
-my-todo-app/
-├── public/
-│   └── preview.png         # App screenshot
-├── src/
-│   ├── components/         # React components (e.g., TodoItem, TodoList)
-│   ├── App.jsx             # Main app logic
-│   ├── index.jsx           # React entry point
-│   └── index.css           # Tailwind styles
-├── tailwind.config.js      # Tailwind configuration
-├── package.json            # Project metadata
-└── README.md               # Project documentation
-```
 
 ## 🚀 Getting Started
 
@@ -126,8 +111,9 @@ Feel free to fork, use, or modify it for your own learning.
 
 ## 👤 Author
 
-**Leon Badass**  
-📫 [GitHub](https://github.com/leonbadass)
+Godwin Azuka |
+📫 [GitHub](https://github.com/leonbadass)    |
+💼 [LinkedIn](https://www.linkedin.com/in/godwin-azuka-b0176a179/)
 
 
 
